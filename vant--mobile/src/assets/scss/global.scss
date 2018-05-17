@@ -1,0 +1,87 @@
+@import "./var";
+@import "mixin";
+
+@import "./common";
+@import "./vant-theme";
+a {
+	color: #000
+}
+
+a:hover{
+	text-decoration: none;
+}
+input{
+	border:none;
+	outline: none;
+	/*清除移动端默认的表单样式*/
+	-webkit-appearance:none;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	padding: 0;
+	margin: 0;
+}
+ul,ol{
+	list-style-type: none;
+}
+img {
+ display:block;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: 400;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+html {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+	max-width: 700px;
+	height: 100%;
+	margin: 0 auto;
+	font-size: 14px;
+}
+
+.view-router {
+	background-color: $bg-color;
+	min-height: 100%;
+	padding-bottom: 50px;
+	box-sizing: border-box;
+}
+
+#app {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+//商品详情页
+.item_desc{
+	img{
+		max-width: 100%;
+		display: block;
+	}
+}
