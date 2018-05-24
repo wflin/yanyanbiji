@@ -16,7 +16,6 @@ import datetime
 from calendar import EPOCH
 
 import math
-from pip.compat import total_seconds
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -142,7 +141,7 @@ def datetime2timestamp(dt, convert_to_utc=False):
     if isinstance(dt, datetime.datetime):
         if convert_to_utc:  # 是否转化为UTC时间
             dt = dt + datetime.timedelta(hours=-8)  # 中国默认时区
-        timestamp = total_seconds(dt - EPOCH)
+        timestamp = dt - EPOCH
         return long(timestamp)
     return dt
 
